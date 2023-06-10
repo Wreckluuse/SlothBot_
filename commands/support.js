@@ -8,20 +8,33 @@ module.exports = {
       option.setName("image").setDescription("Image input").setRequired(true)
     )
     .addStringOption((option) =>
-      option.setName("username").setDescription("Username input").setRequired(true)
+      option
+        .setName("username")
+        .setDescription("Username input")
+        .setRequired(true)
     ),
 
   async execute(interaction) {
-    const ROLE = interaction.member.guild.roles.cache.get("1100527154535604295");
+    const ROLE = interaction.member.guild.roles.cache.get(
+      "1100527154535604295"
+    );
     const UNAME = interaction.options.getString("username") ?? "";
 
     if (UNAME != "") {
-      await interaction.reply({
-        content:
-          "Thank you for your support, the Epic Code User role will be applied shortly.",
-        ephemeral: true,
-      });
-      await interaction.member.roles.add(ROLE);
+      if (interaction.member.roles.has(ROLE)) {
+        await interaction.reply({
+          content:
+            "Oops! It looks like you already have that role, if this is not the case please contact a moderator.",
+          ephemeral: true,
+        });
+      } else {
+        await interaction.reply({
+          content:
+            "Thank you for your support, the Epic Code User role will be applied shortly.",
+          ephemeral: true,
+        });
+        await interaction.member.roles.add(ROLE);
+      }
     } else {
       await interaction.reply({
         content:
