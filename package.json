@@ -1,0 +1,15 @@
+{
+  "name": "slothbot_",
+  "version": "1.0.0",
+  "description": "A simple start to ahrens discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Weightman",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.1.4"
+  }
+}
