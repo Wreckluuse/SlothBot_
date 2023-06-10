@@ -12,7 +12,7 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const ROLE = interaction.member.guild.roles.cache.get("1116463925475692604"); // Actual value to put in later: 1100527154535604295
+    const ROLE = interaction.member.guild.roles.cache.get("1100527154535604295");
     const UNAME = interaction.options.getString("username") ?? "";
 
     if (UNAME != "") {
