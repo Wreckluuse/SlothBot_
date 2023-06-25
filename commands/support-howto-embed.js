@@ -26,7 +26,7 @@ module.exports = {
         {
           name: "Getting started:",
           value:
-            "To begin, type /support in whatever channel you have access to.",
+            "To begin, type /support in any channel you have access to.",
           inline: true,
         }
       );
@@ -35,7 +35,7 @@ module.exports = {
       .setColor(0xff7373)
       .setAuthor({ name: "Sloth Helper" })
       .setDescription(
-        "Add an up to date screenshot or picture displaying Ahrens creator code in your shop. For the username field, please enter your Fortnite username."
+        "Add an up to date screenshot or picture displaying Ahren's creator code in your shop. For the username field, please enter your Fortnite username."
       )
       .addFields(
         {
@@ -49,7 +49,7 @@ module.exports = {
       .setColor(0xff7373)
       .setAuthor({ name: "Slot Helper" })
       .setDescription(
-        "After a few moments the bot should respond with a message like what you see below. If this is not the case and you get an error instead, please reach out to a moderator for help."
+        "After a few moments the bot should respond with a message similar to what you see below. If this is not the case and you get an error instead, please reach out to a moderator for help."
       )
       .addFields(
         {
