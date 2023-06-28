@@ -10,6 +10,7 @@ module.exports = {
     .setDescription("sends embed detailing use of '/support'"),
   async execute(interaction) {
     const ROLE = interaction.member.guild.roles.cache.get("572293133455458325");
+    const MOD_ROLE = interaction.member.guild.roles.cache.get("")
     if (interaction.member.roles.has(MOD_ROLE)) {
     const CHANNEL = await interaction.channel;
     const embeds = [];
